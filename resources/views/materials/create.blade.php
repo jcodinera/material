@@ -72,7 +72,7 @@
                       <input class="custom-control-input" type="radio" id="approvedNo" name="approved">
                       <label for="approvedNo" class="custom-control-label">No</label>
                     </div>
-                  </div>
+                </div>
               </div>
             </div>
 
@@ -140,13 +140,129 @@
 
             {{-- Submit Button --}}
             <div>
-                <button class="btn btn-info my-4 w-100" type="submit">Request for New Material Group</button>
+                <button class="btn btn-info my-4 w-25" type="submit">Request for New Material Group</button>
             </div>
         </form>
-        <script>
-            $('#summernote').summernote({
-                width: 1045
-            });
-        </script>
+
+        <div class="row mb-1">
+            <div class="offset-4 col-4">
+                <span class="text-bold ml-4">MFC</span>
+            </div>
+            <div class="col-4">
+                <span class="text-bold ml-4">ICS</span>
+            </div>
+        </div>
+        <hr>
+        <div class="row align-items-center my-2">
+            <div class="col-4 text-bold">PARTS</div>
+            <div class="col-4 d-flex align-items-center">
+                <input type="number" id="partsMfcMonths" name="partsMfcMonths" class="form-control" style="width: 60px">
+                <span class="text-danger ml-2">months</span>
+            </div>
+            <div class="col-4 d-flex align-items-center ">
+                <input type="number" id="partsIcsMonths" name="partsIcsMonths" class="form-control" style="width: 60px">
+                <span class="text-danger ml-2">months</span>
+            </div> 
+        </div>
+        <div class="row align-items-center  my-2">
+            <div class="col-4 text-bold">LABOR</div>
+            <div class="col-4 d-flex align-items-center">
+                <input type="number" id="laborMfcMonths" name="laborMfcMonths" class="form-control" style="width: 60px">
+                <span class="text-danger ml-2">months</span>
+            </div>
+            <div class="col-4 d-flex align-items-center ">
+                <input type="number" id="laborIcsMonths" name="laborIcsMonths" class="form-control" style="width: 60px">
+                <span class="text-danger ml-2">months</span>
+            </div> 
+        </div>
+        <div class="row align-items-center  my-2">
+            <div class="col-4 text-bold">ON-SITE</div>
+            <div class="col-4 d-flex align-items-center">
+                <input type="number" id="onsiteMfcMonths" name="onsiteMfcMonths" class="form-control" style="width: 60px">
+                <span class="text-danger ml-2">months</span>
+            </div>
+            <div class="col-4 d-flex align-items-center ">
+                <input type="number" id="onsiteIcsMonths" name="onsiteIcsMonths" class="form-control" style="width: 60px">
+                <span class="text-danger ml-2">months</span>
+            </div> 
+        </div>
+ 
+        <label for="warranty" class="mt-4">
+            Warranty Period of Reference : 
+            <span class="text-primary">
+                (NOT APPLICABLE option for <span class="text-success">service</span> type of product only)
+            </span>
+        </label>
+        <div class="d-block ml-3">
+            <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="warranty1" name="warranty">
+                <label for="warranty1" class="custom-control-label font-weight-normal">Delivery Date to Client</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="warranty2" name="warranty">
+                <label for="warranty2" class="custom-control-label font-weight-normal">Invoice Date of Supplier</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="warranty3" name="warranty">
+                <label for="warranty3" class="custom-control-label font-weight-normal">Receiving Date from Supplier</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="warrant4" name="warranty">
+                <label for="warrant4" class="custom-control-label font-weight-normal">Not Applicavble</label>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <label for="materialType" class="col-sm-3 col-form-label">Vendor's Agreement:</label>
+            <div class="col-sm-9">
+                <input type="number" id="partsIcsMonths" name="partsIcsMonths" class="form-control" style="width: 60px">
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="col-sm-3 col-form-label" for="remarks">Notes/Remarks :</label>
+            <div class="col-sm-9">
+                <input type="text" id="remarks" name="remarks" class="form-control">
+            </div>
+        </div>
+
+        <div class="row ml-2 mt-4">
+            <div class="custom-control custom-radio d-inline mr-2">
+                <input class="custom-control-input" type="radio" id="local" name="nationality">
+                <label for="local" class="custom-control-label">Local</label>
+              </div>
+              <div class="custom-control custom-radio d-inline">
+                <input class="custom-control-input" type="radio" id="foreign" name="nationality">
+                <label for="foreign" class="custom-control-label">Foreign</label>
+              </div>
+        </div>
+
+        <div class="row mt-4">
+            <label class="col-sm-3 col-form-label" for="cost">$ Cost:</label>
+            <div class="col-sm-9">
+                <input type="text" id="cost" name="cost" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <label class="col-sm-3 col-form-label" for="acquiredCost">Acquired Cost:</label>
+            <div class="col-sm-9">
+                <input type="text" id="acquiredCost" name="acquiredCost" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <label class="col-sm-3 col-form-label" for="listPrice">List Price:</label>
+            <div class="col-sm-9">
+                <input type="text" id="listPrice" name="listPrice" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <label class="col-sm-3 col-form-label" for="dealerPrice">Dealer Price:</label>
+            <div class="col-sm-9 mb-4">
+                <input type="text" id="dealerPrice" name="dealerPrice" class="form-control">
+            </div>
+        </div>
     </div>
 @endsection
